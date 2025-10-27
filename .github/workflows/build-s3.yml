@@ -1,0 +1,23 @@
+name: Build Seven Secular Sermons PDF
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+      - name: Compile document
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: tex/s3.tex
+          latexmk_use_lualatex: true
+          latexmk_shell_escape: true
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          path: s3.pdf
+          retention-days: 8
+          overwrite: true
+
+# vim: set et ai sw=2 ts=2 sts=2:
+
