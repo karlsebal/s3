@@ -4,18 +4,20 @@
 \geometry{margin=2cm}
 \usepackage[utf8]{inputenc}
 \usepackage[program=/usr/bin/lilypond]{lyluatex}
-% \usepackage{svg} %die ein(zig)e Grafik liegt hier: https://drive.google.com/file/d/1eo8aimAiCAHXEfK_JD_6VRJ53LR79K5W/
-% \svgpath{svg/}
-% \title{Seven Secular Sermons}
+\usepackage{svg} %die ein(zig)e Grafik liegt hier: https://drive.google.com/file/d/1eo8aimAiCAHXEfK_JD_6VRJ53LR79K5W/
+\svgpath{svg/}
+
 \begin{document}
+%\title{Seven Secular Sermons}
+\begin{titlepage}
+    \centering
+    {\huge Seven Secular Sermons\par} % that \par is necessary for the following \vspace to take effect
+    \vspace{2.5cm}
+    \includesvg[scale=0.8]{7ss_hi_res_logo}
+\end{titlepage}
+
 \lilypondfile{lilypond/milkyway.ly}
 \twocolumn
-% \maketitle
-% \begin{figure}[h]
-%    \centering
-%    \includesvg[scale=1.2]{7ss_hi_res_logo}
-%    \label{fig:logo}
-% \end{figure}
 
 \poemtitle{Adrift in Space and Time}
 
