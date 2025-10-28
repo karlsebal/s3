@@ -1,14 +1,19 @@
-\documentclass[14pt,a4paper]{article}
-\usepackage{verse}
+\documentclass[10pt,a4paper]{article}
 \usepackage{geometry}
-\geometry{margin=2cm}
+\geometry{margin=2cm, left=1cm, right=1cm}
+\usepackage{lmodern}
+\usepackage{verse}
 \usepackage[utf8]{inputenc}
 \usepackage[program=/usr/bin/lilypond]{lyluatex}
-\usepackage{svg} %die ein(zig)e Grafik liegt hier: https://drive.google.com/file/d/1eo8aimAiCAHXEfK_JD_6VRJ53LR79K5W/
+\usepackage{svg}
 \svgpath{svg/}
 
+\usepackage{multicol}
+\setlength\columnseprule{.4pt}
+
 \begin{document}
-%\title{Seven Secular Sermons}
+
+
 \begin{titlepage}
     \centering
     {\huge Seven Secular Sermons\par} % that \par is necessary for the following \vspace to take effect
@@ -16,8 +21,7 @@
     \includesvg[scale=0.8]{7ss_hi_res_logo}
 \end{titlepage}
 
-\lilypondfile{lilypond/milkyway.ly}
-\twocolumn
+\begin{multicols}{2}
 
 \poemtitle{Adrift in Space and Time}
 
@@ -193,8 +197,10 @@ the center that they share.
 A thousand times as ponderous\\
 as all that circles it,\\
 it radiates splendiferous\\
-and indiscriminate.
-\\
+and indiscriminate. \\
+\end{verse}
+
+\begin{verse}
 It weighs three-hundred-thirty-three\\
 times thousand times as much\\
 as Earth, which seems like mere debris,\\
@@ -578,6 +584,13 @@ we’ll always know this rhyme.\\
 We’ll always know we’re made of dust\\
 adrift in space and time.
 \end{verse}
+
+\end{multicols}
+
+\lilypondfile{lilypond/milkyway.ly}
+\pagebreak
+
+\begin{multicols}{2}
 
 \poemtitle{The Games of Entropy}
 
@@ -1138,6 +1151,10 @@ shall learn to live and care,\\
 for we have many games to teach\\
 to all the dust out there.
 \end{verse}
+
+\end{multicols}
+
+\begin{multicols}{2}
 
 \poemtitle{One of Us}
 
@@ -1701,6 +1718,10 @@ the gift of life in them, they’ll know\\
 they each are one of us.
 \end{verse}
 
+\end{multicols}
+
+\begin{multicols}{2}
+
 \poemtitle{The Love that guides Humanity}
 
 \begin{verse}
@@ -2166,10 +2187,10 @@ responsibility.
 \end{verse}
 
 \begin{verse}
-We will respond accordingly,
-with what makes us unique:
-the love that guides humanity
-of which this sermon speaks.
+We will respond accordingly,\\
+with what makes us unique:\\
+the love that guides humanity\\
+of which this sermon speaks.\\
 \end{verse}
 
 \begin{verse}
@@ -2262,6 +2283,10 @@ can be the way ahead,\\
 the way towards the mystery\\
 of where we will be led.
 \end{verse}
+
+\end{multicols}
+
+\begin{multicols}{2}
 
 \poemtitle{The Words our Voices raise}
 
@@ -2825,6 +2850,10 @@ as each of us appreciates\\
 the words our voices… \emph{raise.}
 \end{verse}
 
+\end{multicols}
+
+\begin{multicols}{2}
+
 \poemtitle{Our Maps and Territory}
 
 \begin{verse}
@@ -3387,6 +3416,10 @@ remains a way the territory,\\
 the cosmos, knows itself.
 \end{verse}
 
+\end{multicols}
+
+\begin{multicols}{2}
+
 \poemtitle{Our Maps and Territory}
 
 \begin{verse}
@@ -3948,6 +3981,9 @@ but every knowing self\\
 remains a way the territory,\\
 the cosmos, knows itself.
 \end{verse}
+
+\end{multicols}
+\begin{multicols}{2}
 
 \poemtitle{The Universe Machine}
 
@@ -4514,5 +4550,7 @@ beyond this final peak:\\
 the wordless sermon of the void\\
 that all of me unspeak.
 \end{verse}
+
+\end{multicols}
 
 \end{document}
