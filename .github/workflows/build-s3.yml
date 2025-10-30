@@ -9,14 +9,18 @@ jobs:
       - name: Compile document
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: tex/s3.tex
+          root_file: |
+            tex/s3_en.tex
+            tex/s3_de.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
           extra_system_packages: "lilypond inkscape"
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
-          path: s3.pdf
+          path: |
+            s3_en.pdf
+            s3_de.pdf
           retention-days: 8
           overwrite: true
 

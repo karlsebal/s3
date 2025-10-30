@@ -1,6 +1,6 @@
-s3.log
-s3.pdf
-s3.synctex.gz
-s3.aux
+*.log
+*.pdf
+*.synctex.gz
+*.aux
 tmp-ly
 
