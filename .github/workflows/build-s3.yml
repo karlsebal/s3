@@ -12,6 +12,7 @@ jobs:
           root_file: |
             tex/s3_en.tex
             tex/s3_de.tex
+            tex/s3_en_de.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
           extra_system_packages: "lilypond inkscape"
@@ -21,6 +22,7 @@ jobs:
           path: |
             s3_en.pdf
             s3_de.pdf
+            s3_en_de.pdf
           retention-days: 8
           overwrite: true
 
