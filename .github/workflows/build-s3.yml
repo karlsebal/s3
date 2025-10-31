@@ -1,5 +1,9 @@
 name: Build Seven Secular Sermons PDF
-on: [push]
+on: 
+  push:
+    branches:
+      - main
+      - dev
 jobs:
   build_latex:
     runs-on: ubuntu-latest
