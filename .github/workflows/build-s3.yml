@@ -1,5 +1,10 @@
-name: Build Seven Secular Sermons PDF
-on: [push]
+name: Build
+on:
+  push:
+    branches:
+      - main
+      - dev
+  workflow_dispatch:
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -15,14 +20,18 @@ jobs:
             tex/s3_en_de.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
-          extra_system_packages: "lilypond inkscape"
-      - name: Upload PDF
+          extra_system_packages: "lilypond inkscape jinja2-cli tidyhtml zip"
+          post_compile: |
+            tex4ebook tex/s3_en.tex
+            tex4ebook tex/s3_de.tex
+            tex4ebook tex/s3_en_de.tex
+            ls -la tex
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           path: |
-            s3_en.pdf
-            s3_de.pdf
-            s3_en_de.pdf
+            *.pdf
+            *.epub
           retention-days: 8
           overwrite: true
 
