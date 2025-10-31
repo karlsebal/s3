@@ -4,6 +4,8 @@ on:
     branches:
       - main
       - dev
+    tags:
+      - '**'
 jobs:
   build_latex:
     runs-on: ubuntu-latest
