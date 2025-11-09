@@ -2,10 +2,7 @@
 
 \header {
     title = "Children Of The Milky Way"
-    composer = "Martin Böttger"
-    arranger = "James Cook"
-    poet = "Daniel Böttger"
-    copyright = "Text CC0"
+    copyright = "CC0"
 }
 \score{
 \relative c' {
